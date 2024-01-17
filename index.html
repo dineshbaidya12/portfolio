@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Dinesh Chandra Baidya - Personal Portfolio</title>
     <!-- bootstrap Css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- fonts -->
@@ -28,163 +28,242 @@
                 order: 2;
             }
         }
+
+        footer .container .row .footer-div .inner-div {
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer .container .row .footer-div {
+            /* background: grey; */
+            min-height: 20px;
+            margin-top: 20px;
+        }
+
+        footer .container .row {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     </style>
 </head>
 
 <body class="dark-body">
-    <div class="container">
-        <div class="navlink-responsive">
-            <ul>
-                <a href="#Home" class="active">
-                    <li>Home</li>
-                </a>
-                <a href="#About">
-                    <li>About</li>
-                </a>
-                <a href="#Works">
-                    <li>Works</li>
-                </a>
-                <a href="#Contact">
-                    <li>Contact</li>
-                </a>
-            </ul>
-        </div>
-        <nav class="navbar">
 
-            <div class="logo-div">
-                <img src="assets/images/logo.bmp" class="position-relative" alt="logo">
+    <div class="preloader position-relative">
+        <div class="position-absolute loading-div">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <p>Portfolio is Loading Please Wait... <br>
+                    <span id="loadingPercentage">0%</span> Loaded
+                </p>
             </div>
-            <div class="links-div">
+        </div>
+    </div>
+
+    <div class="container">
+
+        <header>
+            <div class="navlink-responsive">
                 <ul>
-                    <a href="#" class="active">
+                    <a href="#Home" class="active">
                         <li>Home</li>
                     </a>
-                    <a href="#">
+                    <a href="#About">
                         <li>About</li>
                     </a>
-                    <a href="#">
+                    <a href="#Works">
                         <li>Works</li>
                     </a>
-                    <a href="#">
+                    <a href="#Contact">
                         <li>Contact</li>
+                    </a>
+                    <a href="#talk">
+                        <li>
+                            <button class="btn btn-dark lets-talk-btn-nav">Let's Talk</button>
+                        </li>
                     </a>
                 </ul>
             </div>
-            <div class="letstalk-div">
-                <button class="btn btn-dark" id="lets-talk-btn">Let's Talk</button>
-                <!-- <button class="btn btn-dark"><img src="assets/images/loading.gif" class="laoding-img"></button> -->
-            </div>
-            <div class="responsive-three-dot-div">
-                <!-- <button class="btn" id="more-btn"><i class="fa-solid fa-bars white"></i></button> -->
-                <button class="morebtn" id="more-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </nav>
+            <nav class="navbar">
 
-        <div class="container" id="body-content">
-            <div class="row">
-                <div class="col-12 col-md-6" id="first-row-first-col">
-                    <div class="intro-div position-relative">
-                        <a href="#goSomewhere" class="go-svg">
+                <div class="logo-div">
+                    <img src="assets/images/logo.bmp" class="position-relative" alt="logo">
+                </div>
+                <div class="links-div">
+                    <ul>
+                        <a href="#" class="active">
+                            <li>Home</li>
                         </a>
-                        <div class="inner-introdiv">
+                        <a href="#">
+                            <li>About</li>
+                        </a>
+                        <a href="#">
+                            <li>Works</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="letstalk-div">
+                    <button class="btn btn-dark" id="lets-talk-btn">Let's Talk</button>
+                    <!-- <button class="btn btn-dark"><img src="assets/images/loading.gif" class="laoding-img"></button> -->
+                </div>
+                <div class="responsive-three-dot-div">
+                    <!-- <button class="btn" id="more-btn"><i class="fa-solid fa-bars white"></i></button> -->
+                    <button class="morebtn" id="more-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <section id="body">
+            <div class="container" id="body-content">
+                <div class="row">
+                    <div class="col-12 col-md-6" id="first-row-first-col">
+                        <div class="intro-div position-relative">
+                            <a href="#goSomewhere" class="go-svg">
+                            </a>
+                            <div class="inner-introdiv">
+                                <div class="row">
+                                    <div class="col-12 col-md-5 profile-picture-div profile-parent">
+                                        <div class="profile-picture-div">
+                                            <img src="assets/images/me.png" alt="Me" class="my-img">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-7 introduction-div">
+                                        <p id="my-role">Full Stack Web Developer</p>
+                                        <p id="full_name">Dinesh Chandra Baidya</p>
+                                        <p id="short_desc" class="scrollable">I am a web developer based on kolkata.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" id="first-row-second-col">
+                        <div class="projects-links-div">
+                            <div class="rail-div">
+                                <div class="marquee">
+                                    <span>
+                                        <a href="#project1">Daily Dart (To Do App) - Flutter</a>
+                                        <a href="#project1">Woocom (E-Commerce App) - Flutter</a>
+                                    </span>
+                                </div>
+                                <div class="marquee marque-2">
+                                    <span>
+                                        <a href="#project1">Daily Dart (To Do App) - Flutter</a>
+                                        <a href="#project1">Woocom (E-Commerce App) - Flutter</a>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="another-two-div">
                             <div class="row">
-                                <div class="col-12 col-md-5 profile-picture-div profile-parent">
-                                    <div class="profile-picture-div">
-                                        <img src="assets/images/me.png" alt="Me" class="my-img">
+                                <div class="col-6 position-relative" id="credential-div">
+                                    <a href="#goSomewhere2" class="go-svg">
+                                    </a>
+                                    <div class="inner-credential">
+                                        <div class="inner-content">
+                                            <div class="image-div">
+                                                <img src="assets/images/sign.png" alt="signature" class="signature">
+                                            </div>
+                                            <div class="credentials-details">
+                                                <p class="default-font-style">More About Me</p>
+                                                <p class="default-font-style2">Credentials</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-7 introduction-div">
-                                    <p id="my-role">Full Stack Web Developer</p>
-                                    <p id="full_name">Dinesh Chandra Baidya</p>
-                                    <p id="short_desc" class="scrollable">I am a web developer based on kolkata.</p>
+                                <div class="col-6 position-relative" id="projects-div">
+                                    <a href="#goSomewhere3" class="go-svg">
+                                    </a>
+
+                                    <div class="inner-credential">
+                                        <div class="inner-content">
+                                            <div class="image-div">
+                                                <img src="assets/images/my-works.png" alt="signature" class="signature">
+                                            </div>
+                                            <div class="credentials-details">
+                                                <p class="default-font-style">Showcase</p>
+                                                <p class="default-font-style2">Projects</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6" id="first-row-second-col">
-                    <div class="projects-links-div">
-                        <div class="rail-div">
-                            <div class="marquee">
-                                <span>
-                                    <a href="#project1">Daily Dart (To Do App) - Flutter</a>
-                                    <a href="#project1">Woocom (E-Commerce App) - Flutter</a>
-                                </span>
-                            </div>
-                            <div class="marquee marque-2">
-                                <span>
-                                    <a href="#project1">Daily Dart (To Do App) - Flutter</a>
-                                    <a href="#project1">Woocom (E-Commerce App) - Flutter</a>
-                                </span>
-                            </div>
+
+                <div class="row second-row">
+                    <div class="col-3 blogs-div second-row-div">
+                        <div class="inner-second-row-div" id="blog-div">
 
                         </div>
-
                     </div>
-                    <div class="another-two-div">
-                        <div class="row">
-                            <div class="col-6 position-relative" id="credential-div">
-                                <a href="#goSomewhere2" class="go-svg">
-                                </a>
-                                <div class="inner-credential">
-                                    <div class="inner-content">
-                                        <div class="image-div">
-                                            <img src="assets/images/sign.png" alt="signature" class="signature">
-                                        </div>
-                                        <div class="credentials-details">
-                                            <p class="default-font-style">More About Me</p>
-                                            <p class="default-font-style2">Credentials</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 position-relative" id="projects-div">
-                                <a href="#goSomewhere3" class="go-svg">
-                                </a>
+                    <div class="col-6 offering-div second-row-div">
+                        <div class="inner-second-row-div">
 
-                                <div class="inner-credential">
-                                    <div class="inner-content">
-                                        <div class="image-div">
-                                            <img src="assets/images/my-works.png" alt="signature" class="signature">
-                                        </div>
-                                        <div class="credentials-details">
-                                            <p class="default-font-style">Showcase</p>
-                                            <p class="default-font-style2">Projects</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="col-3 connect-div second-row-div">
+                        <div class="inner-second-row-div">
 
-                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row third-row">
+                    <div class="col-6 third-row-inner-div">
+                        <div class="inner-row-content">
+
+                        </div>
+                    </div>
+                    <div class="col-6 third-row-inner-div">
+                        <div class="inner-row-content">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3"></div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row d-flex flex-wrap justify-content-center">
+                    <div class="col-12 footer-div">
+                        <div class="inner-div">
+                            <img src="assets/images/logo.bmp" alt="Logo" class="logo">
+                        </div>
+                    </div>
+                    <div class="col-12 footer-div">
+                        <div class="inner-div">
+                            <ul>
+                                <li>Home</li>
+                                <li>About</li>
+                                <li>Works</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 footer-div">
+                        <div class="inner-div">
+                            &copy; All rights reserved by &nbsp;<span><a href="#">dineshbaidya.com</a></span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row second-row">
-                <div class="col-3 blogs-div second-row-div">
-                    <div class="inner-second-row-div" id="blog-div">
-
-                    </div>
-                </div>
-                <div class="col-6 offering-div second-row-div">
-                    <div class="inner-second-row-div">
-
-                    </div>
-                </div>
-                <div class="col-3 connect-div second-row-div">
-                    <div class="inner-second-row-div">
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
+        </footer>
 
     </div>
 
@@ -194,6 +273,25 @@
     <!-- bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // ----------- Preloader ----------------
+        let percentage = 0;
+        const loadingPercentageElement = $('#loadingPercentage');
+        const loadingContentElement = $('#loadingContent');
+
+        function updatePercentage() {
+            if (percentage < 80) {
+                setTimeout(() => {
+                    percentage += 12;
+                    loadingPercentageElement.html(percentage + '%');
+                    updatePercentage();
+                }, 900);
+            }
+        }
+
+        updatePercentage();
+
+        // ----------- Preloader ----------------
+
         $(document).ready(function () {
             // $('#lets-talk-btn').on('click', function () {
             //     $('#lets-talk-btn').html('<img src="assets/images/loading.gif" class="laoding-img">');
@@ -202,6 +300,12 @@
             //     $('.navlink-responsive').removeClass('show');
             //     $('#more-btn').removeClass('active');
             // });
+
+            loadingPercentageElement.html('100%');
+            setTimeout(() => {
+                $('.preloader').fadeOut();
+                $('.dark-body').css('overflow', 'auto');
+            }, 300);
 
             $('#body-content').on('click', function () {
                 $('#more-btn').removeClass('active');
@@ -218,6 +322,12 @@
                 }, 50);
             });
         });
+
+    </script>
+
+    <script>
+
+
 
     </script>
 </body>
