@@ -794,6 +794,35 @@ footer .container .row {
         width: 71% !important;
         margin: auto !important;
     }
+
+    .experience-div .row .inner-exp {
+        width: 50%;
+    }
+
+    .experience-div .row .inner-exp .inner-content {
+        height: 200px;
+        margin-top: 10px;
+    }
+
+    .experience-div .row {
+        height: fit-content;
+    }
+
+    .experience-div {
+        height: fit-content !important;
+        padding: 15px 25px 25px 25px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .experience-div .row .inner-exp {
+        width: 100%;
+    }
+
+    .experience-div .row .inner-exp .inner-content {
+        height: 150px;
+    }
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
