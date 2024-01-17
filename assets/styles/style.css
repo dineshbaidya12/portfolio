@@ -630,14 +630,79 @@ footer .container .row {
     justify-content: center;
 }
 
-
 .services {
     cursor: pointer;
 }
 
+.work-together-div .inner-row-content:after {
+    content: "";
+    background: url('../images/icon2.png');
+    background-repeat: no-repeat;
+    height: 81px;
+    width: 38px;
+    position: absolute;
+    left: 34px;
+    top: 0px;
+}
 
+.work-together-div .inner-row-content .inner-div {
+    padding-top: 103px;
+    padding-left: 29px;
+    line-height: 44px;
+}
 
+.work-together-div .inner-row-content .inner-div p {
+    font-size: 34px;
+    font-weight: bold;
+}
 
+.work-together-div .inner-row-content .inner-div p span {
+    color: #5b78f6;
+}
+
+.experience-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-div .row {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.experience-div .row .inner-exp {
+    height: 100%;
+}
+
+.experience-div .row .inner-exp .inner-content {
+    background: linear-gradient(to right, #242424, #1e1e1e);
+    cursor: pointer;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-div .row .inner-exp .inner-content span:nth-child(1) {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.experience-div .row .inner-exp .inner-content span:nth-child(2) {
+    font-size: 14px;
+    text-align: center;
+    color: #5e5e5e;
+    height: 20px;
+}
 
 
 
