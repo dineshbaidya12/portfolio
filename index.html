@@ -14,148 +14,9 @@
     <!-- Custom CSs -->
     <link rel="stylesheet" href="assets/styles/style.css">
     <style>
-        .intro-div {
-            width: 100%;
-            height: auto;
-            min-height: 50px;
-            background: #171717;
-            border-radius: 50px;
-            padding: 50px;
-        }
-
-        .intro-div .inner-introdiv {
-            width: 100%;
-        }
-
-        .intro-div .inner-introdiv .profile-picture-div.profile-parent {
-            display: flex;
-            background: transparent;
-        }
-
-        .intro-div .inner-introdiv .profile-picture-div {
-            height: 190px;
-            background: linear-gradient(to right, #5877e9, #bbe3fe, #5ab5e2);
-            display: inline-block;
-            vertical-align: top;
-            border-radius: 50px 0px 50px 0px;
-            position: relative;
-            overflow: hidden;
-            padding: 0px;
-        }
-
-        .intro-div .inner-introdiv .introduction-div {
-            /* margin-left: 10px; */
-            /* background: gray; */
-            /* width: 201px; */
-        }
-
-        .my-img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .projects-links-div {
-            padding-top: 20px;
-            padding-bottom: 20px;
-            background: #171717;
-            border-radius: 50px;
-            overflow: hidden;
-        }
-
-        .projects-links-div p {
-            margin: 0px;
-            animation: marquee 12s linear infinite;
-        }
 
 
 
-        .go-svg {
-            position: absolute;
-            right: 25px;
-            bottom: 24px;
-            opacity: .5;
-            transition: all .2s ease-in;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
-
-        .go-svg::after {
-            content: "";
-            background: url('assets/images/svg/light.svg');
-            background-repeat: repeat;
-            position: absolute;
-            right: 16px;
-            bottom: 20px;
-            height: 45px;
-            width: 52px;
-            background-repeat: no-repeat;
-        }
-
-        .go-svg:hover {
-            opacity: 1;
-        }
-
-        .intro-div::after {
-            content: "";
-            background: url('assets/images/icon2.png');
-            background-repeat: repeat;
-            position: absolute;
-            right: 28px;
-            top: 2px;
-            height: 76px;
-            width: 37px;
-            background-repeat: no-repeat;
-        }
-
-        .rail-div {
-            white-space: nowrap;
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-            height: 24px;
-        }
-
-
-        .marquee span {
-            display: inline-block;
-            animation: marquee 8s linear infinite;
-        }
-
-        .marquee {
-            display: inline-block;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0%);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .marquee a {
-            text-decoration: none;
-            color: #8b8b8b;
-            margin-right: 20px;
-        }
-
-        .marquee a:hover {
-            color: white;
-        }
-
-        .another-two-div {
-            width: 100%;
-            height: 215px;
-            background: #171717;
-            border-radius: 50px;
-            margin-top: 10px;
-        }
     </style>
 </head>
 
@@ -212,12 +73,11 @@
             </div>
         </nav>
 
-        <div class="container">
+        <div class="container" id="body-content">
             <div class="row">
                 <div class="col-12 col-md-6" id="first-row-first-col">
                     <div class="intro-div position-relative">
                         <a href="#goSomewhere" class="go-svg">
-                            <!-- <img src="assets/images/svg/light.svg"> -->
                         </a>
                         <div class="inner-introdiv">
                             <div class="row">
@@ -255,7 +115,40 @@
 
                     </div>
                     <div class="another-two-div">
+                        <div class="row">
+                            <div class="col-6 position-relative" id="credential-div">
+                                <a href="#goSomewhere2" class="go-svg">
+                                </a>
+                                <div class="inner-credential">
+                                    <div class="inner-content">
+                                        <div class="image-div">
+                                            <img src="assets/images/sign.png" alt="signature" class="signature">
+                                        </div>
+                                        <div class="credentials-details">
+                                            <p class="default-font-style">More About Me</p>
+                                            <p class="default-font-style2">Credentials</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 position-relative" id="projects-div">
+                                <a href="#goSomewhere3" class="go-svg">
+                                </a>
 
+                                <div class="inner-credential">
+                                    <div class="inner-content">
+                                        <div class="image-div">
+                                            <img src="assets/images/my-works.png" alt="signature" class="signature">
+                                        </div>
+                                        <div class="credentials-details">
+                                            <p class="default-font-style">Showcase</p>
+                                            <p class="default-font-style2">Projects</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -277,8 +170,19 @@
             // $('#lets-talk-btn').on('click', function () {
             //     $('#lets-talk-btn').html('<img src="assets/images/loading.gif" class="laoding-img">');
             // });
+            // $(document).on('click', function () {
+            //     $('.navlink-responsive').removeClass('show');
+            //     $('#more-btn').removeClass('active');
+            // });
 
-            $('#more-btn').on('click', function () {
+            $('#body-content').on('click', function () {
+                $('#more-btn').toggleClass('active');
+                setTimeout(() => {
+                    $('.navlink-responsive').toggleClass('show');
+                }, 50);
+            });
+
+            $('#more-btn').on('click', function (e) {
                 $('#more-btn').toggleClass('active');
                 $('.navlink-responsive').css('display', 'block');
                 setTimeout(() => {
