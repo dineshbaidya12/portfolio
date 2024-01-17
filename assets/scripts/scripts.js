@@ -46,5 +46,6 @@ $(document).ready(function () {
             $('.navlink-responsive').toggleClass('show');
         }, 50);
     });
+    $('[data-toggle="tooltip"]').tooltip();
 });
 
