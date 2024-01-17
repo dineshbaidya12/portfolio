@@ -30,7 +30,7 @@ $(document).ready(function () {
     setTimeout(() => {
         $('.preloader').fadeOut();
         $('.dark-body').css('overflow', 'auto');
-    }, 300);
+    }, 500);
 
     $('#body-content').on('click', function () {
         $('#more-btn').removeClass('active');
