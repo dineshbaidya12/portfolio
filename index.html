@@ -28,6 +28,42 @@
                 order: 2;
             }
         }
+
+        .profiles .inner-profile i {
+            font-size: 34px;
+            gap: 20px;
+            background: linear-gradient(to right, #292929, #1e1e1e);
+            padding: 20px;
+            border-radius: 50%;
+            border: 1px solid #2b2b2b;
+            position: relative;
+            z-index: 99;
+            transition: all .4s ease-in;
+            color: white;
+        }
+
+        .profiles .inner-profile i:hover {
+            background: white;
+            color: black;
+        }
+
+        .profiles .inner-profile {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #212121, #151515);
+            padding: 15px;
+            border-radius: 20px;
+            border: 1px solid #292929;
+            max-height: 108px;
+            overflow: auto;
+            position: relative;
+            z-index: 99;
+        }
     </style>
 </head>
 
@@ -188,6 +224,20 @@
                 <div class="row second-row">
                     <div class="col-3 blogs-div second-row-div">
                         <div class="inner-second-row-div" id="blog-div">
+                            <a href="#goSomewhere3" class="go-svg">
+                            </a>
+
+                            <div class="inner-credential">
+                                <div class="inner-content">
+                                    <div class="image-div">
+                                        <img src="assets/images/gfonts.png" alt="gfonts" class="signature">
+                                    </div>
+                                    <div class="credentials-details">
+                                        <p class="default-font-style">Letest</p>
+                                        <p class="default-font-style2">Blogs</p>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -198,7 +248,33 @@
                     </div>
                     <div class="col-3 connect-div second-row-div">
                         <div class="inner-second-row-div">
+                            <a href="#goSomewhere3" class="go-svg">
+                            </a>
 
+                            <div class="inner-credential">
+                                <div class="inner-content">
+                                    <div class="image-div d-flex flex-wrap profiles">
+                                        <div class="inner-profile scrollable">
+                                            <a href="#">
+                                                <i class="fa-brands fa-linkedin"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-brands fa-github"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-brands fa-square-instagram"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-brands fa-whatsapp"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="credentials-details">
+                                        <p class="default-font-style">Connect With Me</p>
+                                        <p class="default-font-style2">Profiles</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

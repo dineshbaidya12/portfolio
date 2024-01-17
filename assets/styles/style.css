@@ -87,6 +87,20 @@ body {
     color: white;
 }
 
+.scrollable::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+
+/* Mozilla Firefox */
+.scrollable {
+    scrollbar-width: thin;
+    scrollbar-color: #333 transparent;
+}
+
 .navbar {
     height: 80px;
     width: 100%;
@@ -348,6 +362,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 98;
 }
 
 .go-svg::after {
@@ -538,6 +553,9 @@ footer .container .row {
     color: white;
 }
 
+.second-row .image-div {
+    height: 158px;
+}
 
 
 
@@ -630,6 +648,12 @@ footer .container .row {
 
     .second-row {
         margin-top: 0px;
+    }
+
+    .second-row .image-div {
+        height: 150px !important;
+        width: 71% !important;
+        margin: auto !important;
     }
 }
 
