@@ -37,7 +37,7 @@ body {
 }
 
 .preloader {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -497,6 +497,46 @@ body {
     position: relative;
 }
 
+footer .container .row .footer-div .inner-div {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .container .row .footer-div {
+    /* background: grey; */
+    /* min-height: 20px; */
+    margin-top: 20px;
+}
+
+footer .container .row {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    flex-direction: row;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.footer-list a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #676767;
+}
+
+.footer-list a:hover,
+.footer-list a.active {
+    color: white;
+}
 
 
 
