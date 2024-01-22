@@ -704,6 +704,9 @@ footer .container .row {
     height: 20px;
 }
 
+#body-content {
+    padding-top: 50px;
+}
 
 
 /* ---------------- meadia query ---------------- */

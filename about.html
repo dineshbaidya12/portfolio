@@ -13,19 +13,91 @@
     <!-- Custom CSs -->
     <link rel="stylesheet" href="assets/styles/style.css">
     <style>
-        @media (max-width: 991px) {
-            .second-row-div:nth-child(1) {
-                order: 1;
-            }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 
-            .second-row-div:nth-child(2) {
-                order: 3;
-                margin-top: 10px;
-            }
+        .about-first-row {
+            width: 100%;
+            height: 100px;
+            /* background: grey; */
+        }
 
-            .second-row-div:nth-child(3) {
-                order: 2;
-            }
+
+        .about-first-row .right-img-div {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to right, #242424, #1e1e1e);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .about-first-row .right-img-div .image-container {
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            background: linear-gradient(to right, #5877e9, #bbe3fe, #5ab5e2);
+        }
+
+
+        .about-first-row .right-img-div .image-container img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .about-first-row .row .col-4 {
+            height: 360px;
+            width: 370px;
+        }
+
+        .about-first-row .summery-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about-first-row .summery-container .summery-heading p {
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+            font-size: 60px;
+        }
+
+        .about-first-row .summery-container .summery-heading {
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-first-row .summery-container .summery-heading img {
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+        }
+
+        .about-first-row .summery-container .summery-heading p {
+            margin: 0px 20px;
+        }
+
+        .summery-container .summery .summery-inner {
+            height: 270px;
+            width: 100%;
+            border-radius: 20px;
+            background: linear-gradient(to right, #242424, #1e1e1e);
+        }
+
+        .summery-container .summery .summery-inner::before {
+            content: "";
+            background: url('assets/images/icon2.png');
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 100px;
+            left: 50px;
+            top: 0px;
+            position: absolute;
+        }
+
+        .summery-container .summery .summery-inner .summery-para {
+            padding-top: 100px;
         }
     </style>
 </head>
@@ -70,7 +142,7 @@
             <nav class="navbar">
 
                 <div class="logo-div">
-                    <img src="assets/images/logo.bmp" class="position-relative" alt="logo">
+                    <img src="assets/images/svg/logo.svg" class="position-relative" alt="logo">
                 </div>
                 <div class="links-div">
                     <ul>
@@ -106,15 +178,52 @@
         <section id="body">
             <div class="container" id="body-content">
 
+                <div class="about-first-row">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="right-img-div">
+                                <div class="image-container">
+                                    <img src="assets/images/me2.png" alt="Me">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="summery-container">
+                                <div class="summery-heading">
+                                    <img src="assets/images/star.png">
+                                    <p>
+                                        SELF SUMMARY
+                                    </p>
+                                    <img src="assets/images/star.png">
+                                </div>
+                                <div class="summery position-relative">
+                                    <div class="summery-inner">
+                                        <div class="summery-para">
+                                            <h2>Dinesh Chandra Baidya</h2>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis non,
+                                                autem rem impedit nihil delectus fugiat alias vitae vel quibusdam culpa,
+                                                error ratione asperiores repellat laborum? Ducimus maiores id
+                                                repellendus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </section>
 
-        <footer>
+        <!-- <footer>
             <div class="container">
                 <div class="row d-flex flex-wrap justify-content-center">
                     <div class="col-12 footer-div">
                         <div class="inner-div">
-                            <img src="assets/images/logo.bmp" alt="Logo" class="logo">
+                            <img src="assets/images/svg/logo.svg" alt="Logo" class="logo">
                         </div>
                     </div>
                     <div class="col-12 footer-div">
@@ -143,7 +252,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
 
     </div>
 
