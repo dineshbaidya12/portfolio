@@ -371,7 +371,7 @@ body {
 
 .go-svg::after {
     content: "";
-    background: url('../images/svg/light.svg');
+    background: url('../images/light.png');
     background-repeat: repeat;
     position: absolute;
     right: 16px;
@@ -692,6 +692,10 @@ footer .container .row {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.experience-div .row .inner-exp .inner-content:hover {
+    background: #1e1e1e;
 }
 
 .experience-div .row .inner-exp .inner-content span:nth-child(1) {
