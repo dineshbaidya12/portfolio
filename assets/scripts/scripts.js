@@ -25,11 +25,11 @@ $(document).ready(function () {
     //     $('.navlink-responsive').removeClass('show');
     //     $('#more-btn').removeClass('active');
     // });
-
+    $('.dark-body').addClass('scrollable');
     loadingPercentageElement.html('100%');
+    $('#loadingPercentage').attr('id', 'chnage');
     setTimeout(() => {
         $('.preloader').fadeOut();
-        $('.dark-body').css('overflow', 'auto');
     }, 500);
 
     $('#body-content').on('click', function () {
