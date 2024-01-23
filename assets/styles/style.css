@@ -38,13 +38,14 @@ body {
 }
 
 .preloader {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
-    height: 100vh;
     width: 100%;
     background: #0f0f0f;
     z-index: 999;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .loading-div {
@@ -712,7 +713,198 @@ footer .container .row {
 }
 
 
+.about-first-row {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    /* background: grey; */
+}
+
+
+.about-first-row .right-img-div {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #242424, #1e1e1e);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.about-first-row .right-img-div .image-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background: linear-gradient(to right, #5877e9, #bbe3fe, #5ab5e2);
+}
+
+
+.about-first-row .right-img-div .image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-first-row .row .col-4 {
+    height: 360px;
+    width: 370px;
+}
+
+.about-first-row .summery-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-first-row .summery-container .summery-heading p {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.about-first-row .summery-container .summery-heading {
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-first-row .summery-container .summery-heading img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.about-first-row .summery-container .summery-heading p {
+    margin: 0px 20px;
+}
+
+.summery-container .summery .summery-inner {
+    height: 270px;
+    width: 100%;
+    border-radius: 20px;
+    background: linear-gradient(to right, #242424, #1e1e1e);
+}
+
+.summery-container .summery .summery-inner::before {
+    content: "";
+    background: url('../images/icon2.png');
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    left: 50px;
+    top: 0px;
+    position: absolute;
+}
+
+.summery-container .summery .summery-inner .summery-para p {
+    color: #d1d1d1;
+}
+
+.summery-container .summery .summery-inner .summery-para h2 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.summery-container .summery .summery-inner .summery-para {
+    padding: 110px 40px 0px 40px;
+}
+
+.about-first-row .col-8 {
+    width: 71.4518994%;
+}
+
+.about-sec-row .sec-row .inner-div p {
+    margin: 0;
+    color: #dadada;
+}
+
+.about-sec-row .sec-row .inner-div .inner-inner-div {
+    height: 205px;
+    overflow: auto;
+}
+
+.about-sec-row .sec-row .inner-div {
+    background: linear-gradient(to right, #242424, #1e1e1e);
+    border-radius: 25px;
+    padding: 20px 25px;
+    height: 242px;
+    position: relative;
+}
+
+.about-sec-row .sec-row .inner-div .common-head {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about-sec-row .sec-row .inner-div .common-year {
+    color: #626262;
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+.about-sec-row .sec-row .inner-div .common-name {
+    font-size: 18px;
+    margin-top: -7px;
+}
+
+.about-sec-row .sec-row .inner-div .common-designation {
+    font-size: 14px;
+    color: #626262;
+    margin-top: -4px;
+}
+
+.about-sec-row .sec-row .inner-div::after {
+    content: "";
+    position: absolute;
+    height: 79px;
+    width: 37px;
+    top: 0;
+    right: 35px;
+    background: url('../images/icon2.png');
+    background-repeat: repeat;
+    background-repeat: no-repeat;
+}
+
 /* ---------------- meadia query ---------------- */
+@media (max-width: 1399px) {
+    .about-first-row .col-8 {
+        width: 66.666666%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .about-first-row .row .col-8 {
+        max-width: 63%;
+        width: fit-content;
+    }
+
+    .about-first-row .row .col-8 .summery-container .summery-heading {
+        width: 100%;
+    }
+
+    #self-summary {
+        font-size: 40px;
+    }
+
+    .about-first-row .row .col-8 .summery .summery-para {
+        padding: 35px;
+        padding-top: 100px;
+    }
+
+    .about-first-row .row .col-8 .summery .summery-para p {
+        font-size: 15px;
+    }
+
+    .about-first-row .row .col-8 .summery .summery-para h2 {
+        font-size: 30px;
+    }
+
+    .about-first-row .row .col-4 {
+        height: 330px;
+        width: 339px;
+    }
+}
+
+
 @media (max-width: 991px) {
     #first-row-first-col {
         width: 100% !important;
@@ -747,6 +939,36 @@ footer .container .row {
     .third-row .third-row-inner-div:nth-child(2) {
         margin-top: 10px;
 
+    }
+
+    .about-first-row .row .col-4 {
+        height: 270px;
+        width: 275px;
+    }
+
+    .about-first-row .row .col-8 {
+        max-width: 60%;
+        width: fit-content;
+    }
+
+    #self-summary {
+        font-size: 26px;
+    }
+
+    .about-first-row .row .col-8 .summery .summery-para h2 {
+        font-size: 21px;
+    }
+
+    .about-first-row .row .col-8 .summery .summery-para p {
+        font-size: 13px;
+    }
+
+    .about-first-row .row .col-8 .summery .summery-para {
+        padding-top: 87px;
+    }
+
+    .summery-container .summery .summery-inner {
+        height: 220px;
     }
 
 }
@@ -818,6 +1040,53 @@ footer .container .row {
         height: fit-content !important;
         padding: 15px 25px 25px 25px;
     }
+
+    .about-first-row .row .col-4 {
+        height: 320px;
+        width: 350px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .about-first-row .row .col-8 {
+        max-width: 100%;
+        width: fit-content;
+    }
+
+    .about-first-row .row .col-8 .summery .summery-para {
+        padding-top: 75px;
+        padding-bottom: 10px;
+    }
+
+    .summery-heading {
+        margin-bottom: 10px;
+    }
+
+    .about-first-row .row .col-8 .summery .summery-para p {
+        font-size: 14px;
+    }
+
+    .summery-container .summery .summery-inner {
+        height: fit-content;
+    }
+
+    #self-summary {
+        font-size: 20px;
+    }
+
+    .about-sec-row .sec-row .col-6 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .about-sec-row .sec-row .inner-div .inner-inner-div {
+        height: auto;
+        overflow: hidden;
+    }
+
+    .about-sec-row .sec-row .inner-div {
+        height: fit-content;
+    }
 }
 
 
@@ -830,6 +1099,7 @@ footer .container .row {
         height: 150px;
     }
 }
+
 
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
 

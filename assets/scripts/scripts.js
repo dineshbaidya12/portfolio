@@ -30,7 +30,7 @@ $(document).ready(function () {
     $('#loadingPercentage').attr('id', 'chnage');
     setTimeout(() => {
         $('.preloader').fadeOut();
-    }, 500);
+    }, 1);
 
     $('#body-content').on('click', function () {
         $('#more-btn').removeClass('active');

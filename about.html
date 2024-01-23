@@ -14,91 +14,6 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
-
-        .about-first-row {
-            width: 100%;
-            height: 100px;
-            /* background: grey; */
-        }
-
-
-        .about-first-row .right-img-div {
-            height: 100%;
-            width: 100%;
-            background: linear-gradient(to right, #242424, #1e1e1e);
-            border-radius: 20px;
-            padding: 20px;
-        }
-
-        .about-first-row .right-img-div .image-container {
-            height: 100%;
-            width: 100%;
-            border-radius: 20px;
-            background: linear-gradient(to right, #5877e9, #bbe3fe, #5ab5e2);
-        }
-
-
-        .about-first-row .right-img-div .image-container img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .about-first-row .row .col-4 {
-            height: 360px;
-            width: 370px;
-        }
-
-        .about-first-row .summery-container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .about-first-row .summery-container .summery-heading p {
-            font-family: 'Inter', sans-serif;
-            font-weight: bold;
-            font-size: 60px;
-        }
-
-        .about-first-row .summery-container .summery-heading {
-            text-align: center;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .about-first-row .summery-container .summery-heading img {
-            height: 50px;
-            width: 50px;
-            object-fit: cover;
-        }
-
-        .about-first-row .summery-container .summery-heading p {
-            margin: 0px 20px;
-        }
-
-        .summery-container .summery .summery-inner {
-            height: 270px;
-            width: 100%;
-            border-radius: 20px;
-            background: linear-gradient(to right, #242424, #1e1e1e);
-        }
-
-        .summery-container .summery .summery-inner::before {
-            content: "";
-            background: url('assets/images/icon2.png');
-            background-repeat: no-repeat;
-            height: 100px;
-            width: 100px;
-            left: 50px;
-            top: 0px;
-            position: absolute;
-        }
-
-        .summery-container .summery .summery-inner .summery-para {
-            padding-top: 100px;
-        }
     </style>
 </head>
 
@@ -175,7 +90,7 @@
             </nav>
         </header>
 
-        <section id="body">
+        <section id="body" class="about-page">
             <div class="container" id="body-content">
 
                 <div class="about-first-row">
@@ -191,7 +106,7 @@
                             <div class="summery-container">
                                 <div class="summery-heading">
                                     <img src="assets/images/star.png">
-                                    <p>
+                                    <p id="self-summary">
                                         SELF SUMMARY
                                     </p>
                                     <img src="assets/images/star.png">
@@ -212,7 +127,70 @@
                     </div>
                 </div>
 
+                <div class="about-sec-row">
+                    <div class="row sec-row">
+                        <div class="col-6">
+                            <div class="inner-div exp-div">
+                                <div class="inner-inner-div">
 
+                                    <p class="common-head">
+                                        Experience
+                                    </p>
+                                    <p class="common-year">
+                                        2007-2017
+                                    </p>
+                                    <p class="common-name">
+                                        Formar Designer Developer
+                                    </p>
+                                    <p class="common-designation">
+                                        Formar Designer Developer
+                                    </p>
+
+                                    <p class="common-year">
+                                        2007-2017
+                                    </p>
+                                    <p class="common-name">
+                                        Formar Designer Developer
+                                    </p>
+                                    <p class="common-designation">
+                                        Formar Designer Developer
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="inner-div edu-div scrollable">
+                                <div class="inner-inner-div">
+                                    <p class="common-head">
+                                        Education
+                                    </p>
+                                    <p class="common-year">
+                                        2007-2017
+                                    </p>
+                                    <p class="common-name">
+                                        Formar Designer
+                                    </p>
+                                    <p class="common-designation">
+                                        Formar Designer Developer
+                                    </p>
+
+                                    <p class="common-year">
+                                        2007-2017
+                                    </p>
+                                    <p class="common-name">
+                                        Formar Designer Developer
+                                    </p>
+                                    <p class="common-designation">
+                                        Formar Designer Developer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5"></div>
 
 
             </div>
