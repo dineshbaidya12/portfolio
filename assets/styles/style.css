@@ -163,7 +163,7 @@ body {
 
 .navlink-responsive {
     width: 100%;
-    z-index: 9;
+    z-index: 99;
     position: fixed;
     height: auto;
     background: #0f0f0f;
