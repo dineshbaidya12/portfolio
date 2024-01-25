@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Custom CSs -->
     <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <style>
         @media (max-width: 991px) {
             .second-row-div:nth-child(1) {
@@ -106,18 +108,15 @@
         <section id="body">
             <div class="container" id="body-content">
                 <!-- modify this form HTML and place wherever you want your form -->
-                <form action="https://formspree.io/f/xoqgjlwl" method="POST">
-                    <label>
-                        Your email:
-                        <input type="email" name="email">
-                    </label>
-                    <label>
-                        Your message:
-                        <textarea name="message"></textarea>
-                    </label>
-                    <!-- your other form fields go here -->
-                    <button type="submit">Send</button>
-                </form>
+                <!-- <form id="my-form" action="https://formspree.io/f/xoqgjlwl" method="POST" enctype="multipart/form-data">
+                    <label>Email:</label>
+                    <input type="email" name="Email sa" />
+                    <label>Message:</label>
+                    <input type="text" name="message" />
+                    <button id="my-form-button">Submit</button><input type="file" name="upload">
+                    <p id="my-form-status"></p>
+                </form> -->
+
 
                 <div class="row mt-3"></div>
             </div>
@@ -160,6 +159,39 @@
         </footer>
 
     </div>
+    <script>
+        // var form = document.getElementById("my-form");
+
+        // async function handleSubmit(event) {
+        //     event.preventDefault();
+        //     var status = document.getElementById("my-form-status");
+        //     var data = new FormData(event.target);
+        //     fetch(event.target.action, {
+        //         method: form.method,
+        //         body: data,
+        //         headers: {
+        //             'Accept': 'application/json'
+        //         }
+        //     }).then(response => {
+        //         if (response.ok) {
+        //             status.innerHTML = "Thanks for your submission!";
+        //             form.reset()
+        //         } else {
+        //             response.json().then(data => {
+        //                 if (Object.hasOwn(data, 'errors')) {
+        //                     status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        //                 } else {
+        //                     status.innerHTML = "Oops! There was a problem submitting your form"
+        //                 }
+        //             })
+        //         }
+        //     }).catch(error => {
+        //         status.innerHTML = "Oops! There was a problem submitting your form"
+        //     });
+        // }
+        // form.addEventListener("submit", handleSubmit)
+
+    </script>
 
 
     <!-- Jquery Cdn -->
