@@ -1135,6 +1135,80 @@ footer .container .row {
     overflow: hidden;
 }
 
+.works-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-heading img {
+    vertical-align: sub;
+    height: 50px;
+    width: 50px;
+}
+
+.works-heading p {
+    display: inline-block;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.indivisual-project {
+    padding: 10px;
+}
+
+.col-8,
+.col-4 {
+    padding: 0px;
+}
+
+.indivisual-project .contents {
+    width: 100%;
+    background: linear-gradient(to right, #202020, #141414);
+    margin: auto;
+    border-radius: 20px;
+    padding: 25px;
+    padding-right: 25px;
+}
+
+.indivisual-project .contents .project-img {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.indivisual-project .contents .project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.works-details {
+    margin-top: 20px;
+}
+
+.col-8 .indivisual-project {
+    width: 49%;
+    display: inline-block;
+}
+
+.indivisual-project .project-img img:hover {
+    transform: scale(1.1);
+}
+
+.indivisual-project .project-img img {
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+    transition: all .5s ease-in;
+}
+
+
+
 /* ---------------- meadia query ---------------- */
 @media (max-width: 1399px) {
     .about-first-row .col-8 {
@@ -1183,6 +1257,11 @@ footer .container .row {
     .intro-div::after {
         right: 0px !important;
         top: 12px !important;
+    }
+
+    .works-heading img {
+        height: 40px;
+        width: 40px;
     }
 }
 
@@ -1339,6 +1418,38 @@ footer .container .row {
 
     .skills-parent .col-6 {
         width: 100%;
+    }
+
+    .works-body .row {
+        display: flex;
+
+    }
+
+    .works-body .col-4 {
+        order: 1;
+    }
+
+    .works-body .col-8 {
+        order: 0;
+    }
+
+    .works-body .col-8,
+    .works-body .col-4 {
+        width: 100%;
+    }
+
+    .works-body .col-4 .indivisual-project {
+        width: 49%;
+        display: inline-block;
+    }
+
+    .works-heading img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .works-body #self-summary {
+        font-size: 50px;
     }
 }
 
@@ -1497,6 +1608,19 @@ footer .container .row {
         height: fit-content;
     }
 
+    .works-heading img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .works-body #self-summary {
+        font-size: 40px;
+    }
+
+    .works-body .indivisual-project,
+    .works-body .col-4 .indivisual-project {
+        width: 100%;
+    }
 }
 
 
@@ -1513,6 +1637,17 @@ footer .container .row {
 @media (max-width: 400px) {
     .about-third-row .lets-work-together .inner-div p {
         padding-top: 60px;
+    }
+}
+
+@media (max-width: 500px) {
+    .works-heading img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .works-body #self-summary {
+        font-size: 25px;
     }
 }
 
