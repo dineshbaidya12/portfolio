@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteLog "/path/to/your/logs/rewrite.log"
+    RewriteLogLevel 3
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /404-not-found.html [L,R=301]
+</IfModule>
