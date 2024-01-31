@@ -313,7 +313,7 @@
 
     <script>
         document.getElementById('changeUrlButton').addEventListener('click', function () {
-            var baseUrl = 'https://dbaidya.vercel.app';
+            var baseUrl = window.location.protocol + '//' + window.location.host;
             var newUrl = baseUrl + '/123';
             history.pushState(null, null, newUrl);
             updateView();
