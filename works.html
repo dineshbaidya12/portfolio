@@ -12,27 +12,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Custom CSs -->
     <link rel="stylesheet" href="assets/styles/style.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="plugins/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/owl/owl.theme.default.min.css">
+    <!-- Jquery Cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
-        @media (max-width: 991px) {
-            .second-row-div:nth-child(1) {
-                order: 1;
-            }
-
-            .second-row-div:nth-child(2) {
-                order: 3;
-                margin-top: 10px;
-            }
-
-            .second-row-div:nth-child(3) {
-                order: 2;
-            }
+        .item {
+            width: fit-content;
+            height: 100px;
+            max-width: 1000px;
+            max-height: 300px;
+            height: fit-content;
+            border-radius: 20px;
+            overflow: hidden;
         }
 
-        .img {
-            max-width: 100%;
-            height: auto;
-            vertical-align: middle;
-            display: inline-block;
+        .item img {
+            border-radius: 20px;
+            height: fit-content;
+            max-height: 300px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -49,8 +49,30 @@
             </div>
         </div>
     </div>
+    <script src="assets/scripts/preloader.js"></script>
 
-    <div class="container">
+    <div class="container position-relative">
+
+        <div class="close-div" id="close">
+            <img src="assets/images/close_icon.png" alt="close">
+        </div>
+        <div class="arrow left-div">
+            <img src="assets/images/left-arrow.png" alt="left">
+        </div>
+        <div class="arrow right-div">
+            <img src="assets/images/arrow.png" alt="right">
+        </div>
+
+        <div class="project-big-screen-wrapper">
+            <div class="inner-div scrollable">
+                <p id="writeid"></p>
+                <div class="owl-carousel owl-theme">
+
+                </div>
+            </div>
+        </div>
+
+
 
         <header>
             <div class="navlink-responsive">
@@ -113,17 +135,32 @@
         <section id="body" class="works-body">
             <div class="container" id="body-content">
 
-                <button id="changeUrlButton">Click Me</button>
+                <!-- <button id="changeUrlButton">Click Me</button> -->
 
                 <div class="row">
                     <div class="col-4">
                         <div class="indivisual-project">
                             <div class="contents position-relative">
+                                <span class="go-svg ind-projects" data-id="1">
+                                </span>
+                                <div class="project-img">
+                                    <span class="ind-projects" data-id="1">
+                                        <img src="assets/images/projects/project.jpg" alt="Project">
+                                    </span>
+                                </div>
+                                <div class="works-details">
+                                    <p class="default-font-style">Web Application</p>
+                                    <p class="default-font-style2">Real Chat - Real Time Chatting App</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="indivisual-project">
+                            <div class="contents position-relative">
                                 <a href="#goSomewhere" class="go-svg">
                                 </a>
                                 <div class="project-img">
                                     <a href="#">
-                                        <img src="assets/images/project.jpg" alt="Project">
+                                        <img src="assets/images/projects/project2.jpg" alt="Project">
                                     </a>
                                 </div>
                                 <div class="works-details">
@@ -138,7 +175,7 @@
                                 </a>
                                 <div class="project-img">
                                     <a href="#">
-                                        <img src="assets/images/project2.jpg" alt="Project">
+                                        <img src="assets/images/projects/project3.jpg" alt="Project">
                                     </a>
                                 </div>
                                 <div class="works-details">
@@ -146,22 +183,7 @@
                                     <p class="default-font-style2">Dynamic</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="indivisual-project">
-                            <div class="contents position-relative">
-                                <a href="#goSomewhere" class="go-svg">
-                                </a>
-                                <div class="project-img">
-                                    <a href="#">
-                                        <img src="assets/images/project3.jpg" alt="Project">
-                                    </a>
-                                </div>
-                                <div class="works-details">
-                                    <p class="default-font-style">Web Desining</p>
-                                    <p class="default-font-style2">Dynamic</p>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-8">
                         <div class="works-heading">
@@ -175,11 +197,41 @@
                         </div>
                         <div class="indivisual-project">
                             <div class="contents position-relative">
+                                <span class="go-svg ind-projects" data-id="2">
+                                </span>
+                                <div class="project-img">
+                                    <span class="ind-projects" data-id="2">
+                                        <img src="assets/images/projects/project4.jpg" alt="Project">
+                                    </span>
+                                </div>
+                                <div class="works-details">
+                                    <p class="default-font-style">Web Application</p>
+                                    <p class="default-font-style2">Agri (E-commerce Site)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="indivisual-project">
+                            <div class="contents position-relative">
+                                <span class="go-svg ind-projects" data-id="3">
+                                </span>
+                                <div class="project-img">
+                                    <span class="ind-projects" data-id="3">
+                                        <img src="assets/images/projects/project5.jpg" alt="Project">
+                                    </span>
+                                </div>
+                                <div class="works-details">
+                                    <p class="default-font-style">Mobile Application</p>
+                                    <p class="default-font-style2">Daily Dart (Todo & Notes Taking App)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="indivisual-project">
+                            <div class="contents position-relative">
                                 <a href="#goSomewhere" class="go-svg">
                                 </a>
                                 <div class="project-img">
                                     <a href="#">
-                                        <img src="assets/images/project4.jpg" alt="Project">
+                                        <img src="assets/images/projects/project3.jpg" alt="Project">
                                     </a>
                                 </div>
                                 <div class="works-details">
@@ -194,7 +246,7 @@
                                 </a>
                                 <div class="project-img">
                                     <a href="#">
-                                        <img src="assets/images/project5.jpg" alt="Project">
+                                        <img src="assets/images/projects/project.jpg" alt="Project">
                                     </a>
                                 </div>
                                 <div class="works-details">
@@ -209,7 +261,7 @@
                                 </a>
                                 <div class="project-img">
                                     <a href="#">
-                                        <img src="assets/images/project3.jpg" alt="Project">
+                                        <img src="assets/images/projects/project2.jpg" alt="Project">
                                     </a>
                                 </div>
                                 <div class="works-details">
@@ -224,7 +276,7 @@
                                 </a>
                                 <div class="project-img">
                                     <a href="#">
-                                        <img src="assets/images/project.jpg" alt="Project">
+                                        <img src="assets/images/projects/project5.jpg" alt="Project">
                                     </a>
                                 </div>
                                 <div class="works-details">
@@ -232,37 +284,7 @@
                                     <p class="default-font-style2">Dynamic</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="indivisual-project">
-                            <div class="contents position-relative">
-                                <a href="#goSomewhere" class="go-svg">
-                                </a>
-                                <div class="project-img">
-                                    <a href="#">
-                                        <img src="assets/images/project2.jpg" alt="Project">
-                                    </a>
-                                </div>
-                                <div class="works-details">
-                                    <p class="default-font-style">Web Desining</p>
-                                    <p class="default-font-style2">Dynamic</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="indivisual-project">
-                            <div class="contents position-relative">
-                                <a href="#goSomewhere" class="go-svg">
-                                </a>
-                                <div class="project-img">
-                                    <a href="#">
-                                        <img src="assets/images/project5.jpg" alt="Project">
-                                    </a>
-                                </div>
-                                <div class="works-details">
-                                    <p class="default-font-style">Web Desining</p>
-                                    <p class="default-font-style2">Dynamic</p>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -311,7 +333,7 @@
 
     </div>
 
-    <script>
+    <!-- <script>
         document.getElementById('changeUrlButton').addEventListener('click', function () {
             var baseUrl = window.location.protocol + '//' + window.location.host;
             var newUrl = baseUrl + '/123';
@@ -323,15 +345,130 @@
             var currentUrl = window.location.href;
             var path = window.location.pathname;
         }
-    </script>
+    </script> -->
 
-    <!-- Jquery Cdn -->
-    <script class="img" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Owl Carsoul -->
+    <script src="plugins/owl/owl.carousel.min.js"></script>
     <!-- bootstrap Js -->
-    <script class="img" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- custom script -->
     <script src="assets/scripts/scripts.js"></script>
+    <script>
+        var projects = [
+            {
+                id: 1,
+                image: 'project.jpg',
+                heading: 'Item 1',
+                link: 'https://example.com/item1',
+                description: 'Description for item 1',
+                moreImages: ['project.jpg', 'project2.jpg', 'project3.jpg', 'project-dt-1.jpeg']
+            },
+            {
+                id: 2,
+                image: 'project4.jpg',
+                heading: 'Item 2',
+                link: 'https://example.com/item2',
+                description: 'Description for item 2',
+                moreImages: ['project-dt-1.jpeg', 'project3.jpg', 'project-dt-1.jpeg']
+            },
+            {
+                id: 3,
+                image: 'project5.jpg',
+                heading: 'Item 2',
+                link: 'https://example.com/item2',
+                description: 'Description for item 2',
+                moreImages: ['project2.jpg', 'project-dt-1.jpeg', 'project.jpg']
+            },
+        ];
 
+        $(document).ready(function () {
+            $('#close').on('click', function () {
+                $('.project-big-screen-wrapper').css('opacity', 0);
+                $('#close').css('opacity', 0);
+                $('.arrow').css('opacity', 0);
+                setTimeout(() => {
+                    $('.project-big-screen-wrapper').css('display', 'none');
+                    $('#close').css('display', 'none');
+                    $('body').css('overflow', 'auto');
+                    $('.arrow').css('display', 'none');
+                    deactivateOwlCarousel();
+                }, 500);
+            });
+
+            $('.ind-projects').on('click', function () {
+                let id = $(this).data('id');
+                $('#writeid').html(id);
+                let selectedItem = getItemById(id);
+                let itemsContent = '';
+                let mulImgs = selectedItem.moreImages;
+                let carsoulDiv = $('.owl-carousel');
+                mulImgs.forEach(element => {
+                    itemsContent += `
+                        <div class="item">
+                            <img src="assets/images/projects/${element}">    
+                        </div>
+                    `;
+                });
+                carsoulDiv.html(itemsContent);
+                callOwlCarsoul(mulImgs.length);
+
+                if (selectedItem) {
+                    console.log(selectedItem);
+                    VisibleProjectWrapper();
+                } else {
+                    fireSwal('Opps!', 'I think there is some issue, Please try again or report this issue at report@dineshbaidya.com', 'warning');
+                }
+
+
+            });
+            function VisibleProjectWrapper() {
+                $('body').css('overflow', 'hidden');
+                $('.project-big-screen-wrapper').css('display', 'flex');
+                $('.close-div').css('display', 'block');
+                $('.arrow').css('display', 'block');
+                setTimeout(() => {
+                    $('.project-big-screen-wrapper').css('opacity', '1');
+                    $('.close-div').css('opacity', '1');
+                    $('.arrow').css('opacity', '1');
+                }, 100);
+            }
+
+            function callOwlCarsoul(carsoulLength) {
+                $('.owl-carousel').owlCarousel({
+                    margin: 20,
+                    loop: true,
+                    autoWidth: true,
+                    dots: true,
+                    mouseDrag: true,
+                    touchDrag: true,
+                    dotsEach: true,
+                    dots: true,
+                    lazyLoad: true,
+                    items: carsoulLength
+                });
+            }
+
+            function deactivateOwlCarousel() {
+                $('.owl-carousel').owlCarousel('destroy');
+            }
+
+            function getItemById(itemId) {
+                return projects.find(item => item.id === itemId);
+            }
+
+            function fireSwal(title, text, icon) {
+                Swal.fire({
+                    title: title,
+                    text: text,
+                    icon: icon,
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
