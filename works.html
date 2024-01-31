@@ -18,22 +18,7 @@
     <!-- Jquery Cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
-        .item {
-            width: fit-content;
-            height: 100px;
-            max-width: 1000px;
-            max-height: 300px;
-            height: fit-content;
-            border-radius: 20px;
-            overflow: hidden;
-        }
 
-        .item img {
-            border-radius: 20px;
-            height: fit-content;
-            max-height: 300px;
-            cursor: pointer;
-        }
     </style>
 </head>
 
@@ -53,22 +38,47 @@
 
     <div class="container position-relative">
 
-        <div class="close-div" id="close">
-            <img src="assets/images/close_icon.png" alt="close">
-        </div>
-        <div class="arrow left-div">
-            <img src="assets/images/left-arrow.png" alt="left">
-        </div>
-        <div class="arrow right-div">
-            <img src="assets/images/arrow.png" alt="right">
-        </div>
+
 
         <div class="project-big-screen-wrapper">
-            <div class="inner-div scrollable">
-                <p id="writeid"></p>
-                <div class="owl-carousel owl-theme">
-
+            <div class="inner-div position-relative">
+                <div class="close-div" id="close">
+                    <img src="assets/images/close_icon.png" alt="close">
                 </div>
+                <div class="arrow left-div" id="left-div" data-id="1">
+                    <img src="assets/images/left-arrow.png" alt="left">
+                </div>
+                <div class="arrow right-div" id="right-div" data-id="3">
+                    <img src="assets/images/arrow.png" alt="right">
+                </div>
+
+
+                <div class="scrollable-inner scrollable">
+                    <div class="heading-div">
+                        <p class="common-head" id="project-heading"></p>
+                    </div>
+
+                    <div class="inner-head-img-div">
+                        <img src="" alt="Project 1" id="project-main-img">
+                    </div>
+
+                    <div class="content-div">
+                        <p id="des">Description</p>
+                        <a href="#" id="project-link" target="_blank"></a>
+                        <p id="used-tech">Technology Used</p>
+                        <p id="project-tech-use"></p>
+                        <p id="project-description">
+
+                        </p>
+
+                    </div>
+
+                    <div class="owl-wrapper-static">
+                        <div class="owl-carousel owl-theme">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -135,8 +145,6 @@
         <section id="body" class="works-body">
             <div class="container" id="body-content">
 
-                <!-- <button id="changeUrlButton">Click Me</button> -->
-
                 <div class="row">
                     <div class="col-4">
                         <div class="indivisual-project">
@@ -150,40 +158,10 @@
                                 </div>
                                 <div class="works-details">
                                     <p class="default-font-style">Web Application</p>
-                                    <p class="default-font-style2">Real Chat - Real Time Chatting App</p>
+                                    <p class="default-font-style2">Real Chat (Real Time Chatting Web App)</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="indivisual-project">
-                            <div class="contents position-relative">
-                                <a href="#goSomewhere" class="go-svg">
-                                </a>
-                                <div class="project-img">
-                                    <a href="#">
-                                        <img src="assets/images/projects/project2.jpg" alt="Project">
-                                    </a>
-                                </div>
-                                <div class="works-details">
-                                    <p class="default-font-style">Web Desining</p>
-                                    <p class="default-font-style2">Dynamic</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="indivisual-project">
-                            <div class="contents position-relative">
-                                <a href="#goSomewhere" class="go-svg">
-                                </a>
-                                <div class="project-img">
-                                    <a href="#">
-                                        <img src="assets/images/projects/project3.jpg" alt="Project">
-                                    </a>
-                                </div>
-                                <div class="works-details">
-                                    <p class="default-font-style">Web Desining</p>
-                                    <p class="default-font-style2">Dynamic</p>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="col-8">
                         <div class="works-heading">
@@ -225,70 +203,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="indivisual-project">
-                            <div class="contents position-relative">
-                                <a href="#goSomewhere" class="go-svg">
-                                </a>
-                                <div class="project-img">
-                                    <a href="#">
-                                        <img src="assets/images/projects/project3.jpg" alt="Project">
-                                    </a>
-                                </div>
-                                <div class="works-details">
-                                    <p class="default-font-style">Web Desining</p>
-                                    <p class="default-font-style2">Dynamic</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="indivisual-project">
-                            <div class="contents position-relative">
-                                <a href="#goSomewhere" class="go-svg">
-                                </a>
-                                <div class="project-img">
-                                    <a href="#">
-                                        <img src="assets/images/projects/project.jpg" alt="Project">
-                                    </a>
-                                </div>
-                                <div class="works-details">
-                                    <p class="default-font-style">Web Desining</p>
-                                    <p class="default-font-style2">Dynamic</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="indivisual-project">
-                            <div class="contents position-relative">
-                                <a href="#goSomewhere" class="go-svg">
-                                </a>
-                                <div class="project-img">
-                                    <a href="#">
-                                        <img src="assets/images/projects/project2.jpg" alt="Project">
-                                    </a>
-                                </div>
-                                <div class="works-details">
-                                    <p class="default-font-style">Web Desining</p>
-                                    <p class="default-font-style2">Dynamic</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="indivisual-project">
-                            <div class="contents position-relative">
-                                <a href="#goSomewhere" class="go-svg">
-                                </a>
-                                <div class="project-img">
-                                    <a href="#">
-                                        <img src="assets/images/projects/project5.jpg" alt="Project">
-                                    </a>
-                                </div>
-                                <div class="works-details">
-                                    <p class="default-font-style">Web Desining</p>
-                                    <p class="default-font-style2">Dynamic</p>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
-
-
 
                 <div class="row mt-3"></div>
             </div>
@@ -333,20 +249,6 @@
 
     </div>
 
-    <!-- <script>
-        document.getElementById('changeUrlButton').addEventListener('click', function () {
-            var baseUrl = window.location.protocol + '//' + window.location.host;
-            var newUrl = baseUrl + '/123';
-            history.pushState(null, null, newUrl);
-            updateView();
-        });
-
-        function updateView() {
-            var currentUrl = window.location.href;
-            var path = window.location.pathname;
-        }
-    </script> -->
-
     <!-- Sweet Alert -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -357,32 +259,96 @@
     <!-- custom script -->
     <script src="assets/scripts/scripts.js"></script>
     <script>
+        let index = 0;
         var projects = [
             {
                 id: 1,
                 image: 'project.jpg',
-                heading: 'Item 1',
-                link: 'https://example.com/item1',
-                description: 'Description for item 1',
+                heading: 'Real Chat (Real Time Chatting Web App)',
+                link: 'https://realchat.com',
+                linkText: 'Real Chat - realchat.com',
+                description: `Welcome to our innovative "Chatting" web application! Crafted with precision using the powerful Laravel framework, our platform seamlessly integrates the dynamic capabilities of Pusher, ensuring a real-time, hassle-free chatting experience. Gone are the days of reloading pages to receive messages or notifications - our application broadcasts updates instantly, providing users with a smooth and uninterrupted flow of communication.
+
+                This fully-fledged chatting web application boasts a responsive design, catering to users across various devices, including desktops, iPads, and mobile phones. Whether you're at your desk, on the go, or relaxing with your iPad, our platform guarantees a consistent and user-friendly experience.
+
+                Empowering users with a multitude of features, our application enables them to:
+
+                Engage in real-time conversations without the need to refresh the page.
+                Receive instant notifications, including friend requests and other important updates.
+                Enjoy a seamless and responsive design that adapts to desktop, iPad, and mobile screens. <br>
+                <ul>
+                    <li><strong>Real-Time Communication:</strong> Utilizing Laravel and Pusher, we've eliminated the need for page reloads. Receive messages and notifications instantly. </li>
+
+                    <li><strong>Responsive Design:</strong> Enjoy the same engaging experience on desktops, iPads, and mobile devices.</li>
+
+                    <li><strong>Secure Authentication:</strong> Create your account and log in securely for a personalized chatting experience.</li>
+
+                    <li><strong>Effortless Search:</strong> Find and connect with other users effortlessly through our intuitive search feature.</li>
+
+                    <li><strong>Friend Requests:</strong> Expand your social circle by sending or accepting friend requests at your convenience.</li>
+
+                    <li><strong>Friendship Management:</strong> Have full control over your connections by managing friend requests with ease.</li>
+
+                    <li><strong>Instant Messaging:</strong> Engage in real-time conversations with friends without any delays.</li>
+
+                </ul>`,
+                usedTech: 'HTML, CSS, Javascript, Jquery, Bootstrap, Ajax, Laravel, ChatPusher, MySql',
                 moreImages: ['project.jpg', 'project2.jpg', 'project3.jpg', 'project-dt-1.jpeg']
             },
             {
                 id: 2,
                 image: 'project4.jpg',
-                heading: 'Item 2',
-                link: 'https://example.com/item2',
-                description: 'Description for item 2',
-                moreImages: ['project-dt-1.jpeg', 'project3.jpg', 'project-dt-1.jpeg']
+                heading: 'Agri (E-commerce Site)',
+                link: 'https://agriexpress.com',
+                linkText: 'Agri Express - agriexpress.com',
+                description: `Welcome to Agri, your dedicated E-commerce site catering to all your agricultural needs. Whether you are a seasoned farmer or an enthusiast exploring the world of agriculture, Agri provides a comprehensive marketplace for all your farming requirements.
+                <strong>Key Features:</strong>
+                <ul>
+                    <li><strong>Wide Product Range:</strong> Explore a vast array of agricultural products ranging from seeds and fertilizers to advanced machinery and tools.</li>
+
+                    <li><strong>Expert Guidance:</strong> Access valuable insights and expert advice to make informed decisions about crop management, soil health, and other farming practices.</li>
+
+                    <li><strong>Secure Transactions:</strong> Enjoy peace of mind with secure and hassle-free online transactions. Your financial information is handled with utmost confidentiality.</li>
+
+                    <li><strong>Customized Solutions:</strong> Tailor your shopping experience with personalized recommendations based on your farming preferences and requirements.</li>
+
+                    <li><strong>Efficient Delivery:</strong> Experience prompt and reliable delivery services to ensure that your agricultural essentials reach your doorstep on time.</li>
+
+                    <li><strong>Community Engagement:</strong> Connect with fellow farmers, share experiences, and participate in forums to foster a sense of community and knowledge-sharing.</li>
+                </ul>
+                Agri is committed to supporting and empowering the agricultural community by providing a seamless online platform. Join us in cultivating a brighter and more sustainable future for agriculture.
+                `,
+                usedTech: 'HTML, CSS, Javascript, Jquery, Jquery, Ajax, PHP',
+                moreImages: ['project2.jpg', 'project-dt-1.jpeg', 'project.jpg']
             },
             {
                 id: 3,
                 image: 'project5.jpg',
-                heading: 'Item 2',
-                link: 'https://example.com/item2',
-                description: 'Description for item 2',
-                moreImages: ['project2.jpg', 'project-dt-1.jpeg', 'project.jpg']
+                heading: 'Daily Dart (Todo & Notes Taking App)',
+                link: '',
+                linkText: '',
+                description: `Introducing Daily Dart, your go-to Todo and Notes Taking App designed to simplify your daily tasks and streamline your thoughts. This user-friendly application is a powerful tool to help you organize your day, set priorities, and capture important ideas on the go.
+                <strong>Key Features:</strong>
+                <ul>
+                    <li><strong>Intuitive Todo Lists:</strong> Create and manage your daily tasks with ease. Whether it's work-related deadlines, personal chores, or long-term goals, Daily Dart keeps everything in order.</li>
+
+                    <li><strong>Effortless Notes Taking:</strong> Capture your thoughts, ideas, and important information effortlessly. The app provides a clean canvas for jotting down notes whenever inspiration strikes.</li>
+
+                    <li><strong>Reminder Notifications:</strong> Stay on top of your commitments with timely reminder notifications. Daily Dart ensures you never miss an important task or appointment.</li>
+
+                    <li><strong>User-Friendly Interface:</strong> Navigate through the app effortlessly with a clean and intuitive design. Daily Dart is designed to make your Todo and Notes management a breeze.</li>
+
+                    <li><strong>Cross-Platform Accessibility:</strong> Access your Todos and Notes seamlessly across devices, be it your smartphone, tablet, or computer. Your data syncs in real-time for a consistent experience.</li>
+
+                    <li><strong>Customization Options:</strong> Tailor the app to your preferences with customizable themes and organizational features. Make Daily Dart truly yours.</li>
+                </ul>
+                Whether you're a professional looking to manage your work tasks efficiently or an individual seeking a reliable tool for personal organization, Daily Dart is here to enhance your productivity and simplify your daily routine.`,
+                usedTech: 'Flutter',
+                moreImages: ['project-dt-1.jpeg', 'project3.jpg', 'project-dt-1.jpeg']
             },
         ];
+        let projectIndex = [1, 2, 3];
+
 
         $(document).ready(function () {
             $('#close').on('click', function () {
@@ -400,8 +366,50 @@
 
             $('.ind-projects').on('click', function () {
                 let id = $(this).data('id');
-                $('#writeid').html(id);
+                let isNextPrev = false;
+                showIndivisualProject(id, isNextPrev);
+            });
+
+            $(document).on('click', '#left-div, #right-div', function () {
+                let id = $(this).data('id');
+                let isNextPrev = true;
+                showIndivisualProject(id, isNextPrev);
+            });
+
+            function showIndivisualProject(id, isNextPrev) {
+                let lGivenIndex = 0;
+                let rGivenIndex = 0;
+                if (isNextPrev == true) {
+                    turnOnpreloader();
+                    deactivateOwlCarousel();
+                }
+                index = projectIndex.indexOf(id);
+                if (index == 0) {
+                    lGivenIndex = projectIndex[0];
+                    rGivenIndex = projectIndex[index + 1];
+                    $('#left-div').attr('data-id', lGivenIndex);
+                    $('#right-div').attr('data-id', rGivenIndex);
+                    $('#left-div').css('display', 'none');
+                } else if (index == projectIndex.length - 1) {
+                    lGivenIndex = projectIndex[index - 1];
+                    rGivenIndex = projectIndex[projectIndex.length - 1];
+                    $('#left-div').attr('data-id', lGivenIndex);
+                    $('#right-div').attr('data-id', rGivenIndex);
+                    $('#right-div').css('display', 'none');
+                } else {
+                    lGivenIndex = projectIndex[index - 1];
+                    rGivenIndex = projectIndex[index + 1];
+                    $('#left-div').attr('data-id', lGivenIndex);
+                    $('#right-div').attr('data-id', rGivenIndex);
+                }
+
                 let selectedItem = getItemById(id);
+                if (selectedItem == -1) {
+                    turnOffpreloader();
+                    fireSwal('Opps!', 'I think there is some issue, Please try again or report this issue at report@dineshbaidya.com', 'warning');
+
+                    return;
+                }
                 let itemsContent = '';
                 let mulImgs = selectedItem.moreImages;
                 let carsoulDiv = $('.owl-carousel');
@@ -412,18 +420,33 @@
                         </div>
                     `;
                 });
+                $('#project-description').html(selectedItem.description);
+                $('#project-tech-use').html(selectedItem.usedTech);
+                if (selectedItem.link != '') {
+                    $('#project-link').html(selectedItem.linkText);
+                    $('#project-link').attr('href', selectedItem.link);
+                } else {
+                    $('#project-link').html('');
+                }
+                $('#project-main-img').attr('src', 'assets/images/projects/' + selectedItem.image);
+                $('#project-main-img').attr('alt', 'assets/images/projects/' + selectedItem.heading);
+                $('#project-heading').html(selectedItem.heading);
                 carsoulDiv.html(itemsContent);
                 callOwlCarsoul(mulImgs.length);
 
+                if (isNextPrev == true) {
+                    turnOffpreloader();
+                }
+
                 if (selectedItem) {
-                    console.log(selectedItem);
-                    VisibleProjectWrapper();
+                    if (isNextPrev == false) {
+                        VisibleProjectWrapper();
+                    }
                 } else {
                     fireSwal('Opps!', 'I think there is some issue, Please try again or report this issue at report@dineshbaidya.com', 'warning');
                 }
+            };
 
-
-            });
             function VisibleProjectWrapper() {
                 $('body').css('overflow', 'hidden');
                 $('.project-big-screen-wrapper').css('display', 'flex');
@@ -431,7 +454,7 @@
                 $('.arrow').css('display', 'block');
                 setTimeout(() => {
                     $('.project-big-screen-wrapper').css('opacity', '1');
-                    $('.close-div').css('opacity', '1');
+                    $('.close-div').css('opacity', '.35');
                     $('.arrow').css('opacity', '1');
                 }, 100);
             }
@@ -447,6 +470,7 @@
                     dotsEach: true,
                     dots: true,
                     lazyLoad: true,
+                    center: false,
                     items: carsoulLength
                 });
             }
@@ -456,7 +480,12 @@
             }
 
             function getItemById(itemId) {
-                return projects.find(item => item.id === itemId);
+                let foundItem = projects.find(item => item.id === itemId);
+                if (foundItem !== undefined) {
+                    return foundItem;
+                } else {
+                    return -1;
+                }
             }
 
             function fireSwal(title, text, icon) {
@@ -467,6 +496,16 @@
                     confirmButtonText: 'OK'
                 });
             }
+
+            function turnOnpreloader() {
+                $('.preloader p').css('display', 'none');
+                $('.preloader').css('display', 'block');
+            }
+            function turnOffpreloader() {
+                $('.preloader').css('display', 'none');
+                $('.preloader p').css('display', 'block');
+            }
+
         });
     </script>
 </body>
