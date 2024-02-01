@@ -17,19 +17,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <style>
-        @media (max-width: 991px) {
-            .second-row-div:nth-child(1) {
-                order: 1;
+        .err {
+            border: 1px solid #ff000061 !important;
+            background: linear-gradient(to right, #ff0000, #ffd146) !important;
+            color: black !important;
+            animation: vibrantAnimation 0.5s ease-in-out 1;
+            opacity: .5;
+        }
+
+        @keyframes vibrantAnimation {
+
+            0%,
+            100% {
+                transform: translateX(0);
             }
 
-            .second-row-div:nth-child(2) {
-                order: 3;
-                margin-top: 10px;
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translateX(-10px);
             }
 
-            .second-row-div:nth-child(3) {
-                order: 2;
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translateX(10px);
             }
+        }
+
+        .errTxt {
+            color: #ff0000;
+            margin-top: -20px;
+            padding-left: 7px;
+            margin-bottom: 15px;
+            display: none;
         }
     </style>
 </head>
@@ -109,17 +133,99 @@
         </header>
 
         <section id="body">
-            <div class="container" id="body-content">
-                <!-- modify this form HTML and place wherever you want your form -->
-                <!-- <form id="my-form" action="https://formspree.io/f/xoqgjlwl" method="POST" enctype="multipart/form-data">
-                    <label>Email:</label>
-                    <input type="email" name="Email sa" />
-                    <label>Message:</label>
-                    <input type="text" name="message" />
-                    <button id="my-form-button">Submit</button><input type="file" name="upload">
-                    <p id="my-form-status"></p>
-                </form> -->
+            <div class="container contact-body" id="body-content">
+                <div class="row">
+                    <div class="left col-4">
+                        <div class="inner-wrapper">
+                            <div class="main-content">
+                                <p class="common-head">Contact Information</p>
+                                <div class="indivisual-contacts row">
+                                    <div class="icon-div col-3">
+                                        <div class="inner-icon">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="details-div col-9">
+                                        <p class="small-head">Connect With Mail</p>
+                                        <p class="info">dineshbaidya15@gmail.com</p>
+                                        <p class="info">baidyadinesh15@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="indivisual-contacts row">
+                                    <div class="icon-div col-3">
+                                        <div class="inner-icon">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                    </div>
+                                    <div class="details-div col-9">
+                                        <p class="small-head">Call Us</p>
+                                        <p class="info">8538086292</p>
+                                    </div>
+                                </div>
+                                <div class="indivisual-contacts row">
+                                    <div class="icon-div col-3">
+                                        <div class="inner-icon">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </div>
+                                    </div>
+                                    <div class="details-div col-9">
+                                        <p class="small-head">Location</p>
+                                        <p class="info location">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Iure,
+                                            placeat.</p>
+                                    </div>
+                                </div>
+                                <p class="common-head">Social Information</p>
+                                <div class="social-info">
+                                    <a href="#" target="_blank">
+                                        <div class="ind-social-info">
+                                            <i class="fa-brands fa-square-github"></i>
+                                        </div>
+                                    </a>
 
+                                    <a href="#" target="_blank">
+                                        <div class="ind-social-info">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </div>
+                                    </a>
+
+                                    <a href="#" target="_blank">
+                                        <div class="ind-social-info">
+                                            <i class="fa-brands fa-square-instagram"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right col-8">
+                        <div class="inner-wrapper">
+                            <div class="main-content">
+                                <h1 class="main-head">Let's Work <span>Together</span></h1>
+                                <div class="form-div">
+                                    <form action="POST" name="contact-form" class="contact-form" id="contact-form"
+                                        action="https://formspree.io/f/xoqgjlwl">
+                                        <input type="text" name="Name" id="name" class="form-input"
+                                            placeholder="Your Name*" required>
+                                        <p class="errTxt" id="nameErr">Please Tell Me Your Name</p>
+                                        <input type="email" name="Email" id="email" class="form-input"
+                                            placeholder="Your Email*" required>
+                                        <p class="errTxt" id="emailErr">Please Correct Your Email</p>
+                                        <input type="text" name="Subject" id="subject" class="form-input"
+                                            placeholder="Subject*" required>
+                                        <p class="errTxt" id="subErr">Provide Any Subject. eg - "I have a work for you"
+                                        </p>
+                                        <textarea name="Message" id="message" class="form-input scrollable"
+                                            placeholder="Your Message*" required></textarea>
+                                        <p class="errTxt" id="msgErr">Please Tell Me Your Name</p>
+                                        <button type="button" class="submit" id="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row mt-3"></div>
             </div>
@@ -162,38 +268,114 @@
         </footer>
 
     </div>
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
-        // var form = document.getElementById("my-form");
+        $(document).ready(function () {
+            $(document).on('keypress', function (event) {
+                if (event.which === 13 && document.activeElement.tagName !== 'TEXTAREA') {
+                    $('#submit').click();
+                }
+            });
 
-        // async function handleSubmit(event) {
-        //     event.preventDefault();
-        //     var status = document.getElementById("my-form-status");
-        //     var data = new FormData(event.target);
-        //     fetch(event.target.action, {
-        //         method: form.method,
-        //         body: data,
-        //         headers: {
-        //             'Accept': 'application/json'
-        //         }
-        //     }).then(response => {
-        //         if (response.ok) {
-        //             status.innerHTML = "Thanks for your submission!";
-        //             form.reset()
-        //         } else {
-        //             response.json().then(data => {
-        //                 if (Object.hasOwn(data, 'errors')) {
-        //                     status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-        //                 } else {
-        //                     status.innerHTML = "Oops! There was a problem submitting your form"
-        //                 }
-        //             })
-        //         }
-        //     }).catch(error => {
-        //         status.innerHTML = "Oops! There was a problem submitting your form"
-        //     });
-        // }
-        // form.addEventListener("submit", handleSubmit)
+            $('#contact-form').on('submit', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            });
 
+            $('#submit').on('click', function () {
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                let isValid = true;
+                if ($('#name').val() == '') {
+                    $('#name').addClass('err');
+                    $('#nameErr').css('display', 'block');
+                    isValid = false;
+                } else {
+                    $('#name').removeClass('err');
+                    $('#nameErr').css('display', 'none');
+                }
+
+                if ($('#email').val() == '' || !emailRegex.test($('#email').val())) {
+                    $('#email').addClass('err');
+                    $('#emailErr').css('display', 'block');
+                    isValid = false;
+                } else {
+                    $('#email').removeClass('err');
+                    $('#emailErr').css('display', 'none');
+                }
+
+                if ($('#subject').val() == '') {
+                    $('#subject').addClass('err');
+                    $('#subErr').css('display', 'block');
+                    isValid = false;
+                } else {
+                    $('#subject').removeClass('err');
+                    $('#subErr').css('display', 'none');
+                }
+
+                if ($('#message').val() == '') {
+                    $('#message').addClass('err');
+                    $('#msgErr').css('display', 'block');
+                    isValid = false;
+                } else {
+                    $('#message').removeClass('err');
+                    $('#msgErr').css('display', 'none');
+                }
+
+                if (isValid) {
+                    Swal.fire({
+                        title: 'Are you sure, you want to submit the form now?',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes, proceed!'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            submitTheForm();
+                        }
+                    });
+                }
+            });
+
+            function submitTheForm() {
+                let data = {
+                    Name: $('#name').val(),
+                    Email: $('#email').val(),
+                    Subject: $('#subject').val(),
+                    Message: $('#message').val(),
+                };
+                $.ajax({
+                    method: 'POST',
+                    url: 'https://formspree.io/f/xoqgjlwl',
+                    data: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    },
+                    success: function (result) {
+                        let title = 'Thank You ' + $('#name').val().split(' ')[0] + '!';
+                        fireSwal(title, 'I received your message just now. I will try to respond as soon as I can.', 'success');
+                        $('#contact-form')[0].reset();
+                    },
+                    error: function (result) {
+                        let title = 'I am sorry  ' + $('#name').val().split(' ')[0] + '!';
+                        fireSwal(title, 'Maybe there is some mistake. Please try again after some time or report this issue to report@dineshbaidya.com.', 'warning');
+                    }
+                });
+            }
+
+
+            function fireSwal(title, text, icon) {
+                Swal.fire({
+                    title: title,
+                    text: text,
+                    icon: icon,
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
     </script>
 
     <!-- bootstrap Js -->
