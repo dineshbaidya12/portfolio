@@ -45,10 +45,10 @@
                 <div class="close-div" id="close">
                     <img src="assets/images/close_icon.png" alt="close">
                 </div>
-                <div class="arrow left-div" id="left-div" data-id="1">
+                <div class="arrow left-div" id="left-div">
                     <img src="assets/images/left-arrow.png" alt="left">
                 </div>
-                <div class="arrow right-div" id="right-div" data-id="3">
+                <div class="arrow right-div" id="right-div">
                     <img src="assets/images/arrow.png" alt="right">
                 </div>
 
@@ -149,10 +149,10 @@
                     <div class="col-4">
                         <div class="indivisual-project">
                             <div class="contents position-relative">
-                                <span class="go-svg ind-projects" data-id="1">
+                                <span class="go-svg ind-projects" data-id="50">
                                 </span>
                                 <div class="project-img">
-                                    <span class="ind-projects" data-id="1">
+                                    <span class="ind-projects" data-id="50">
                                         <img src="assets/images/projects/project.jpg" alt="Project">
                                     </span>
                                 </div>
@@ -175,10 +175,10 @@
                         </div>
                         <div class="indivisual-project">
                             <div class="contents position-relative">
-                                <span class="go-svg ind-projects" data-id="2">
+                                <span class="go-svg ind-projects" data-id="75">
                                 </span>
                                 <div class="project-img">
-                                    <span class="ind-projects" data-id="2">
+                                    <span class="ind-projects" data-id="75">
                                         <img src="assets/images/projects/project4.jpg" alt="Project">
                                     </span>
                                 </div>
@@ -190,10 +190,10 @@
                         </div>
                         <div class="indivisual-project">
                             <div class="contents position-relative">
-                                <span class="go-svg ind-projects" data-id="3">
+                                <span class="go-svg ind-projects" data-id="100">
                                 </span>
                                 <div class="project-img">
-                                    <span class="ind-projects" data-id="3">
+                                    <span class="ind-projects" data-id="100">
                                         <img src="assets/images/projects/project5.jpg" alt="Project">
                                     </span>
                                 </div>
@@ -262,7 +262,7 @@
         let index = 0;
         var projects = [
             {
-                id: 1,
+                id: 50,
                 image: 'project.jpg',
                 heading: 'Real Chat (Real Time Chatting Web App)',
                 link: 'https://realchat.com',
@@ -296,7 +296,7 @@
                 moreImages: ['project.jpg', 'project2.jpg', 'project3.jpg', 'project-dt-1.jpeg']
             },
             {
-                id: 2,
+                id: 75,
                 image: 'project4.jpg',
                 heading: 'Agri (E-commerce Site)',
                 link: 'https://agriexpress.com',
@@ -322,7 +322,7 @@
                 moreImages: ['project2.jpg', 'project-dt-1.jpeg', 'project.jpg']
             },
             {
-                id: 3,
+                id: 100,
                 image: 'project5.jpg',
                 heading: 'Daily Dart (Todo & Notes Taking App)',
                 link: '',
@@ -347,67 +347,49 @@
                 moreImages: ['project-dt-1.jpeg', 'project3.jpg', 'project-dt-1.jpeg']
             },
         ];
-        let projectIndex = [1, 2, 3];
 
 
         $(document).ready(function () {
             $('#close').on('click', function () {
-                $('.project-big-screen-wrapper').css('opacity', 0);
-                $('#close').css('opacity', 0);
-                $('.arrow').css('opacity', 0);
-                setTimeout(() => {
-                    $('.project-big-screen-wrapper').css('display', 'none');
-                    $('#close').css('display', 'none');
-                    $('body').css('overflow', 'auto');
-                    $('.arrow').css('display', 'none');
-                    deactivateOwlCarousel();
-                }, 500);
+                closeIndivisualProject(false);
             });
 
             $('.ind-projects').on('click', function () {
                 let id = $(this).data('id');
-                let isNextPrev = false;
-                showIndivisualProject(id, isNextPrev);
+                showIndivisualProject(id);
             });
 
-            $(document).on('click', '#left-div, #right-div', function () {
-                let id = $(this).data('id');
-                let isNextPrev = true;
-                showIndivisualProject(id, isNextPrev);
+            $('#right-div').on('click', function () {
+                showIndivisualProject(projects[index + 1]['id'], false);
+            });
+            $('#left-div').on('click', function () {
+                showIndivisualProject(projects[index - 1]['id'], false);
             });
 
-            function showIndivisualProject(id, isNextPrev) {
+            function showIndivisualProject(id) {
+                deactivateOwlCarousel();
+                index = getIndex(id);
+                if (index == -1) {
+                    fireSwal('Opps!', 'I think there is some issue, Please try again or report this issue at report@dineshbaidya.com', 'warning');
+                    return;
+                }
+                $('.arrow').css('display', 'block');
                 let lGivenIndex = 0;
                 let rGivenIndex = 0;
-                if (isNextPrev == true) {
-                    turnOnpreloader();
-                    deactivateOwlCarousel();
-                }
-                index = projectIndex.indexOf(id);
                 if (index == 0) {
-                    lGivenIndex = projectIndex[0];
-                    rGivenIndex = projectIndex[index + 1];
-                    $('#left-div').attr('data-id', lGivenIndex);
-                    $('#right-div').attr('data-id', rGivenIndex);
                     $('#left-div').css('display', 'none');
-                } else if (index == projectIndex.length - 1) {
-                    lGivenIndex = projectIndex[index - 1];
-                    rGivenIndex = projectIndex[projectIndex.length - 1];
-                    $('#left-div').attr('data-id', lGivenIndex);
-                    $('#right-div').attr('data-id', rGivenIndex);
+                    $('#right-div').css('display', 'block');
+                } else if (index == projects.length - 1) {
                     $('#right-div').css('display', 'none');
+                    $('#left-div').css('display', 'block');
                 } else {
-                    lGivenIndex = projectIndex[index - 1];
-                    rGivenIndex = projectIndex[index + 1];
-                    $('#left-div').attr('data-id', lGivenIndex);
-                    $('#right-div').attr('data-id', rGivenIndex);
+                    $('#right-div').css('display', 'block');
+                    $('#left-div').css('display', 'block');
                 }
 
                 let selectedItem = getItemById(id);
                 if (selectedItem == -1) {
-                    turnOffpreloader();
                     fireSwal('Opps!', 'I think there is some issue, Please try again or report this issue at report@dineshbaidya.com', 'warning');
-
                     return;
                 }
                 let itemsContent = '';
@@ -434,14 +416,8 @@
                 carsoulDiv.html(itemsContent);
                 callOwlCarsoul(mulImgs.length);
 
-                if (isNextPrev == true) {
-                    turnOffpreloader();
-                }
-
                 if (selectedItem) {
-                    if (isNextPrev == false) {
-                        VisibleProjectWrapper();
-                    }
+                    VisibleProjectWrapper();
                 } else {
                     fireSwal('Opps!', 'I think there is some issue, Please try again or report this issue at report@dineshbaidya.com', 'warning');
                 }
@@ -451,11 +427,9 @@
                 $('body').css('overflow', 'hidden');
                 $('.project-big-screen-wrapper').css('display', 'flex');
                 $('.close-div').css('display', 'block');
-                $('.arrow').css('display', 'block');
                 setTimeout(() => {
                     $('.project-big-screen-wrapper').css('opacity', '1');
                     $('.close-div').css('opacity', '.35');
-                    $('.arrow').css('opacity', '1');
                 }, 100);
             }
 
@@ -504,6 +478,26 @@
             function turnOffpreloader() {
                 $('.preloader').css('display', 'none');
                 $('.preloader p').css('display', 'block');
+            }
+
+            function getIndex(projectIdToFind) {
+                var index = projects.findIndex(function (project) {
+                    return project.id === projectIdToFind;
+                });
+
+                return index;
+            }
+
+            function closeIndivisualProject(isQuck) {
+                $('.project-big-screen-wrapper').css('opacity', 0);
+                $('#close').css('opacity', 0);
+                setTimeout(() => {
+                    $('.project-big-screen-wrapper').css('display', 'none');
+                    $('#close').css('display', 'none');
+                    $('body').css('overflow', 'auto');
+                    $('.arrow').css('display', 'none');
+                    deactivateOwlCarousel();
+                }, isQuck ? 0 : 500);
             }
 
         });
