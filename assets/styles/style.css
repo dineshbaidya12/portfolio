@@ -1895,6 +1895,10 @@ footer .container .row {
         margin-bottom: 10px;
     }
 
+    .another-two-div .row #projects-div {
+        padding-bottom: 10px;
+    }
+
     .second-row .blogs-div {
         width: 100%;
     }
