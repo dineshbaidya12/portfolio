@@ -1585,6 +1585,10 @@ footer .container .row {
     padding-top: 12px;
 }
 
+.info {
+    user-select: all;
+}
+
 /* ---------------- meadia query ---------------- */
 @media (min-width: 1399px) {
     .inner-credential .inner-content .my-works-img-div {
