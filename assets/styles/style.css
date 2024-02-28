@@ -1585,8 +1585,8 @@ footer .container .row {
     padding-top: 12px;
 }
 
-.info {
-    user-select: all;
+.offering-inner-responsive {
+    overflow: auto !important;
 }
 
 /* ---------------- meadia query ---------------- */
@@ -2061,6 +2061,25 @@ footer .container .row {
 
     .my-works-img-div {
         min-height: 215px;
+    }
+
+    .offering-inner-div-responsive {
+        height: fit-content !important;
+        max-height: fit-content !important;
+    }
+
+    .inner-second-row-div.offering-inner-div-responsive .offering-inner-responsive {
+        height: fit-content !important;
+        max-height: fit-content !important;
+    }
+
+    .second-row .offering-div {
+        height: fit-content;
+        max-height: fit-content;
+    }
+
+    .offering-inner-div-responsive .inner-credential {
+        padding-bottom: 75px;
     }
 }
 
