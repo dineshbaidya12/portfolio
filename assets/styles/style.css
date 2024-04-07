@@ -1866,6 +1866,10 @@ footer .container .row {
     .inner-credential .inner-content .my-works-img-div {
         height: 150px;
     }
+
+    .row-cred .left .img-div {
+        width: 86%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -2006,7 +2010,7 @@ footer .container .row {
     }
 
     .row-cred .left .img-div {
-        width: 212px;
+        width: 198px;
     }
 
     .row-cred .left .contact-me {
