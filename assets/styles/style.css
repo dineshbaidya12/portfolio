@@ -989,7 +989,7 @@ footer .container .row {
 
 .row-cred .left .img-div {
     height: 280px;
-    width: 100%;
+    width: 93%;
     display: block;
     margin: auto;
     background: linear-gradient(to right, #5877e9, #bbe3fe, #5ab5e2);
@@ -1429,11 +1429,11 @@ footer .container .row {
 
 .contact-body .left .inner-wrapper .indivisual-contacts .inner-icon:hover,
 .contact-body .left .social-info .ind-social-info:hover {
-
     background: linear-gradient(to right, #1e1e1e, #292929);
 }
 
 .contact-body .left .inner-wrapper .indivisual-contacts .inner-icon {
+    padding: 20px;
     height: 100%;
     width: 100%;
     background: linear-gradient(120deg, hsla(0, 0%, 100%, .12), hsla(0, 0%, 100%, .01));
