@@ -2010,7 +2010,8 @@ footer .container .row {
     }
 
     .row-cred .left .img-div {
-        width: 196px;
+        width: 195px;
+        height: 210px;
     }
 
     .row-cred .left .contact-me {
